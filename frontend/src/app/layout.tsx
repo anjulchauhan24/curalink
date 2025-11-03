@@ -2,7 +2,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { ThemeProvider } from '@/components/theme-provider'
+// import { ThemeProvider } from '@/components/theme-provider'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 
@@ -12,13 +12,7 @@ export const metadata: Metadata = {
   title: 'CuraLink | Connecting Patients & Researchers',
   description:
     'AI-powered platform bridging patients, researchers, and clinical trials for better healthcare innovation.',
-  keywords: [
-    'CuraLink',
-    'clinical trials',
-    'health research',
-    'AI healthcare',
-    'patient network',
-  ],
+  keywords: 'CuraLink, clinical trials, health research, AI healthcare, patient network',
   authors: [{ name: 'CuraLink Team' }],
   openGraph: {
     title: 'CuraLink | Connecting Patients & Researchers',
@@ -55,13 +49,13 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-gray-50 text-gray-900 min-h-screen flex flex-col`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           <main className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-8">
             {children}
           </main>
           <Footer />
-        </ThemeProvider>
+        </ThemeProvider> */}
       </body>
     </html>
   )

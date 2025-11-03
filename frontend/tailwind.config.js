@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ['class'], // ✅ enables dark mode support for next-themes
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -36,11 +37,11 @@ module.exports = {
         },
       },
       animation: {
-        'blob': 'blob 7s infinite',
-        'float': 'float 3s ease-in-out infinite',
+        blob: 'blob 7s infinite',
+        float: 'float 3s ease-in-out infinite',
         'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
-        'shimmer': 'shimmer 2s infinite',
-        'gradient': 'gradient 15s ease infinite',
+        shimmer: 'shimmer 2s infinite',
+        gradient: 'gradient 15s ease infinite',
         'slide-up': 'slide-up 0.3s ease-out',
         'slide-down': 'slide-down 0.2s ease-out',
         'fade-in': 'fade-in 0.2s ease-out',
@@ -48,91 +49,43 @@ module.exports = {
       },
       keyframes: {
         blob: {
-          '0%': {
-            transform: 'translate(0px, 0px) scale(1)',
-          },
-          '33%': {
-            transform: 'translate(30px, -50px) scale(1.1)',
-          },
-          '66%': {
-            transform: 'translate(-20px, 20px) scale(0.9)',
-          },
-          '100%': {
-            transform: 'translate(0px, 0px) scale(1)',
-          },
+          '0%': { transform: 'translate(0px, 0px) scale(1)' },
+          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '100%': { transform: 'translate(0px, 0px) scale(1)' },
         },
         float: {
-          '0%, 100%': {
-            transform: 'translateY(0px)',
-          },
-          '50%': {
-            transform: 'translateY(-20px)',
-          },
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
         },
         'pulse-slow': {
-          '0%, 100%': {
-            opacity: '1',
-          },
-          '50%': {
-            opacity: '0.5',
-          },
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
         },
         shimmer: {
-          '0%': {
-            backgroundPosition: '-1000px 0',
-          },
-          '100%': {
-            backgroundPosition: '1000px 0',
-          },
+          '0%': { backgroundPosition: '-1000px 0' },
+          '100%': { backgroundPosition: '1000px 0' },
         },
         gradient: {
-          '0%': {
-            backgroundPosition: '0% 50%',
-          },
-          '50%': {
-            backgroundPosition: '100% 50%',
-          },
-          '100%': {
-            backgroundPosition: '0% 50%',
-          },
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         },
         'slide-up': {
-          from: {
-            transform: 'translateY(100%)',
-            opacity: '0',
-          },
-          to: {
-            transform: 'translateY(0)',
-            opacity: '1',
-          },
+          from: { transform: 'translateY(100%)', opacity: '0' },
+          to: { transform: 'translateY(0)', opacity: '1' },
         },
         'slide-down': {
-          from: {
-            opacity: '0',
-            transform: 'translateY(-10px)',
-          },
-          to: {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
+          from: { opacity: '0', transform: 'translateY(-10px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
         },
         'fade-in': {
-          from: {
-            opacity: '0',
-          },
-          to: {
-            opacity: '1',
-          },
+          from: { opacity: '0' },
+          to: { opacity: '1' },
         },
         'scale-in': {
-          from: {
-            opacity: '0',
-            transform: 'scale(0.95)',
-          },
-          to: {
-            opacity: '1',
-            transform: 'scale(1)',
-          },
+          from: { opacity: '0', transform: 'scale(0.95)' },
+          to: { opacity: '1', transform: 'scale(1)' },
         },
       },
       backgroundImage: {
@@ -140,7 +93,7 @@ module.exports = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(59, 130, 246, 0.5)',
+        glow: '0 0 20px rgba(59, 130, 246, 0.5)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0.6)',
         'inner-lg': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       },
@@ -150,4 +103,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
