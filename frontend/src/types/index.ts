@@ -125,10 +125,10 @@ export interface HealthExpert {
 
 // Favorite types
 export interface Favorite {
-  id: number;
-  user_id: number;
+  id: number;  // or string if you're using UUID
+  user_id: number;  // or string if using UUID
   favorite_type: string;
-  favorite_id: string;
+  favorite_id: string;  // Changed from item_id
   notes?: string;
   created_at: string;
 }
